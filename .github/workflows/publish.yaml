@@ -146,7 +146,7 @@ jobs:
           gh pr create --repo coder/code-server-aur --title "chore: bump version to ${{ env.VERSION }}" --body "PR opened by @$GITHUB_ACTOR" --assignee $GITHUB_ACTOR
 
   docker:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout code-server
         uses: actions/checkout@v4
