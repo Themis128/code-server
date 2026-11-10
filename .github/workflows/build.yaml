@@ -244,7 +244,7 @@ jobs:
       # force a rebuild.
       - name: Fetch prebuilt Code package from cache
         id: cache-vscode
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: lib/vscode-reh-web-*
           key: vscode-reh-package-${{ secrets.VSCODE_CACHE_VERSION }}-${{ steps.vscode-rev.outputs.rev }}-${{ hashFiles('patches/*.diff', 'ci/build/build-vscode.sh') }}
@@ -360,7 +360,7 @@ jobs:
           ./test/node_modules/.bin/playwright install
 
       - name: Cache Caddy
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         id: caddy-cache
         with:
           path: |
