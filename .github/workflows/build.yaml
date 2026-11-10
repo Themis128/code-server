@@ -206,7 +206,7 @@ jobs:
           submodules: true
 
       - name: Install system dependencies
-        run: sudo apt update && sudo apt install -y libkrb5-dev
+        run: sudo apt update && sudo apt install -y libkrb5-dev libx11-dev libxkbfile-dev libxext-dev libxrender-dev
 
       - name: Install quilt
         uses: awalsh128/cache-apt-pkgs-action@latest
@@ -283,7 +283,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install system dependencies
-        run: sudo apt update && sudo apt install -y libkrb5-dev
+        run: sudo apt update && sudo apt install -y libkrb5-dev libx11-dev libxkbfile-dev libxext-dev libxrender-dev
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -332,7 +332,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install system dependencies
-        run: sudo apt update && sudo apt install -y libkrb5-dev
+        run: sudo apt update && sudo apt install -y libkrb5-dev libx11-dev libxkbfile-dev libxext-dev libxrender-dev
 
       - name: Install Node.js
         uses: actions/setup-node@v4
